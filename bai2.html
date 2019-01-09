@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    function tryRemoveFromArray(array, index) {
+        if (index >= 0 && index < array.length) {
+            for (var i = 0; i < array.length; i++) {
+                if (i === index) {
+                    for (var i = index; i < array.length; i++) {
+                        array[i] = array[i + 1];
+                    }
+                }
+            }
+            return array;
+        } else
+            return array;
+    }
+
+    var array = [8, 9, 11, 3, 3, 6, 2, 9];
+    alert(tryRemoveFromArray(array, -5));
+    alert(tryRemoveFromArray(array, 10));
+    alert(tryRemoveFromArray(array, 5));
+
+</script>
+</body>
+</html>
